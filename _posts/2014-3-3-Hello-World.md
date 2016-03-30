@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 阅读笔记 Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding
+title: 阅读笔记 Deep Compression Compressing Deep Neural Networks with Pruning Trained Quantization and Huffman Coding
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).

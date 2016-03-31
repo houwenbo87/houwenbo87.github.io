@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [阅读笔记] Deep Compression Compressing Deep Neural Networks with Pruning Trained Quantization and Huffman Coding
+title: [阅读笔记] Deep Compression
 ---
 
 http://arxiv.org/abs/1510.00149

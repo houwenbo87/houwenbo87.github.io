@@ -37,7 +37,18 @@ $$C_{i}=N_{i}N_{i-1}$$\t(1),
 
 $$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$$\t(2)
 
-\\(C_{i}\\)为层$$i$$的连接数量，\\(C_{i0}\\)为原始网络连接数，\\(C_{ir}\\)为retrain后的网络连接数量，\\(N_{i}\\)为层$i$的神经元数量。\\(D_{0}\\)为原始的dropout rate，\\(D_{r}\\)为retrain时的dropout rate。
+\\(C_{i}\\)
+为层$$i$$的连接数量，
+\\(C_{i0}\\)
+为原始网络连接数，
+\\(C_{ir}\\)
+为retrain后的网络连接数量，
+\\(N_{i}\\)
+为层$$i$$的神经元数量。
+\\(D_{0}\\)
+为原始的dropout rate，
+\\(D_{r}\\)
+为retrain时的dropout rate。
 
 3.Local Pruning and Parameter Co-adaptation: 
 

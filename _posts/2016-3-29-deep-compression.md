@@ -54,6 +54,7 @@ $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 \\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
 
 $$C_{i}=N_{i}N_{i-1}$$
+\\(D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}\\)
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 

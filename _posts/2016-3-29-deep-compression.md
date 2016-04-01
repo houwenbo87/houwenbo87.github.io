@@ -32,6 +32,12 @@ Pruning就是去掉网络中的冗余连接。如下图所示，主要有三个�
 
 2.Dropout Ratio Adjustment: 在pruning训练过程中，如果连接被丢弃就没有机会再恢复回来。由于模型参数变得稀疏，减少了over-fitting，因此retraining时dropout的参数要调小。
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+$C_{i}=N_{i}N_{i-1}$
+$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$
+
+$C_{i}$为层$i$的连接数量，$C_{i0}$为原始网络连接数，$C_{ir}$为retrain后的网络连接数量，$N_{i}$为层$i$的神经元数量。$D_{0}$为原始的dropout rate，$D_{r}为retrain时的dropout rate。
+
 3.Local Pruning and Parameter Co-adaptation: 
 
 4.Iterative Pruning:
@@ -46,15 +52,12 @@ http://web.stanford.edu/class/ee380/Abstracts/160106.html
 
 <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 $ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
 
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 \\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
 
-$$C_{i}=N_{i}N_{i-1}$$
-\\(D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}\\)
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 

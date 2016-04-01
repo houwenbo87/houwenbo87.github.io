@@ -40,6 +40,9 @@ Pruning就是去掉网络中的冗余连接。如下图所示，主要有三个�
 
 http://web.stanford.edu/class/ee380/Abstracts/160106.html
 
+![][1]
+[1]: http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1
+
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)

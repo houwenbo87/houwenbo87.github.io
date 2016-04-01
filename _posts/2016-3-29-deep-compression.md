@@ -45,15 +45,21 @@ Pruning就是去掉网络中的冗余连接。如下图所示，主要有三个�
 \\(D_{r}\\)
 为retrain时的dropout rate。
 
-$$C_{i}=N_{i}N_{i-1}$$\t(1),
+$$C_{i}=N_{i}N_{i-1}$$,
 
-$$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$$\t(2)
+$$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$$
 
-3.Local Pruning and Parameter Co-adaptation: 
+3.Local Pruning and Parameter Co-adaptation: 在retrain过程中，使用剪枝后的模型参数作为初始化参数。为了克服网络太深引起的vanishiing gradient问题，作者分段做retrain，比如固定卷积层参数不变，训练全连接。然后再反过来训练。
 
-4.Iterative Pruning:
+4.Iterative Pruning: 采用迭代的训练的方式来实现模型剪枝，每次迭代使用贪心策略来寻找最好的连接。
 
 5.Pruning Neurons: Pruning过程中会有0输入或0输出的神经元，这种神经元没有意义，需要删掉。
+
+问题：
+1. 剪枝的阈值是如何设定的，论文没有具体介绍。
+2. 每层可以剪枝多少连接是否是自动训练的，还是每层设定一个阈值。
+3. 如果想实现自动剪枝，每层的剪枝截止的条件该如何设定，剪枝条件是否可以在bp过程中自动调节。
+本文的剪枝方法是hard dropconnect，剪掉后就不能再恢复了，剪掉后loss和accuracy都会明显的下降，但是需要迭代好多次才能知道是否能恢复到原来的模型精度。
 
 http://web.stanford.edu/class/ee380/Abstracts/160106.html
 

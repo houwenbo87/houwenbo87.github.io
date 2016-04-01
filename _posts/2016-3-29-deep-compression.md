@@ -45,6 +45,13 @@ http://web.stanford.edu/class/ee380/Abstracts/160106.html
 
 $ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
 
+<img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
+
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)

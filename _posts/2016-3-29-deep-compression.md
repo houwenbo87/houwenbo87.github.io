@@ -22,14 +22,15 @@ title: 阅读笔记 Deep Compression
 
 Pruning就是去掉网络中的冗余连接。如下图所示，主要有三个步骤：1.学习那些连接是重要的；2.去掉不重要的连接；3.finetuning去掉冗余连接后的网络。
 ![_config.yml]({{ site.baseurl }}/images/deep-compression/pruning_1.png)
-所谓训练连接的重要性，就是正常的训练网络，权值越大表示这个连接越重要，反之就是冗余的连接，可以剪枝掉。所谓模型剪枝就是设定一个阈值，将权值小于该阈值的连接去掉。如下图所示，将稠密网络转换为稀疏网络。
+
+所谓训练连接的重要性，就是正常训练的模型，权值越大表示这个连接越重要，反之就是冗余的连接，可以剪枝掉。所谓模型剪枝就是设定一个阈值，将权值小于该阈值的连接去掉。如下图所示，将稠密网络转换为稀疏网络。
 ![_config.yml]({{ site.baseurl }}/images/deep-compression/pruning_2.png)
 
 训练剪枝模型的细节：
 
 1.Regularization: L1会将更多的参数变为0，pruning后仍有很高的精度。L2虽然pruning后精度降低，但是retrain后会有更高的精度。因此论文采用L2 Regularization。caffe默认的就是L2 Regularization。
 
-2.Dropout Ratio Adjustment: 在pruning训练过程中，如果连接被丢弃就没有机会再恢复回来。由于模型参数变得稀疏，减少了over-fiting，因此retraining时dropout的参数要调小。
+2.Dropout Ratio Adjustment: 在pruning训练过程中，如果连接被丢弃就没有机会再恢复回来。由于模型参数变得稀疏，减少了over-fitting，因此retraining时dropout的参数要调小。
 
 3.Local Pruning and Parameter Co-adaptation: 
 

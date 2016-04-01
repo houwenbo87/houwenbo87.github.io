@@ -43,6 +43,8 @@ http://web.stanford.edu/class/ee380/Abstracts/160106.html
 ![][1]
 [1]: http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1
 
+$ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
+
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)

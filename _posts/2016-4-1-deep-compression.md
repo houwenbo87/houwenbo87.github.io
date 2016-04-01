@@ -2,7 +2,7 @@
 layout: post
 title: 阅读笔记 Deep Compression
 ---
-论文全名 [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](http://arxiv.org/abs/1510.00149)
+论文链接 [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](http://arxiv.org/abs/1510.00149)
 
 ## 摘要
 深度神经网络属于计算和内存密集型的算法，很难部署在硬件资源受限的嵌入式系统上。

@@ -31,12 +31,7 @@ Pruning就是去掉网络中的冗余连接。如下图所示，主要有三个�
 1.Regularization: L1会将更多的参数变为0，pruning后仍有很高的精度。L2虽然pruning后精度降低，但是retrain后会有更高的精度。因此论文采用L2 Regularization。caffe默认的就是L2 Regularization。
 
 2.Dropout Ratio Adjustment: 在pruning训练过程中，如果连接被丢弃就没有机会再恢复回来。由于模型参数变得稀疏，减少了over-fitting，因此retraining时dropout的参数要调小。
-
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-$$C_{i}=N_{i}N_{i-1}$$\t(1),
-
-$$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$$\t(2)
-
 \\(C_{i}\\)
 为层$$i$$的连接数量，
 \\(C_{i0}\\)
@@ -49,6 +44,10 @@ $$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$$\t(2)
 为原始的dropout rate，
 \\(D_{r}\\)
 为retrain时的dropout rate。
+
+$$C_{i}=N_{i}N_{i-1}$$\t(1),
+
+$$D_{r}=D_{0}\sqrt{\frac{C_{ir}}{C_{i0}}}$$\t(2)
 
 3.Local Pruning and Parameter Co-adaptation: 
 

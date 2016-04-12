@@ -37,4 +37,4 @@ k-means的初始化方法，对模型的预测精度有一定的影响。采用�
 
 霍夫曼编码是一种通用的数据无损压缩方式，这里不做具体介绍。
 
-作者YouTube上的讲解 https://www.youtube.com/watch?v=baZOmGSSUAg
+作者在[YouTube]上的讲解(https://www.youtube.com/watch?v=baZOmGSSUAg)
